@@ -1,7 +1,13 @@
+{{#link-to 'home' class="button"}}
+  Close Notebook
+{{/link-to}}
+
 <h2>Notes</h2>
 
-{{#each model as |note|}}
-  <h4>{{moment-format note.dateRecorded 'MM-DD-YYYY' 'MM-DD-YYYY'}} - {{note.timeOfDay}}</h4>
+{{#each model as |note i|}}
+  <div class="box box{{i}}">
+    <h4>{{moment-format note.dateRecorded 'MM-DD-YYYY' 'MM-DD-YYYY'}} - {{note.timeOfDay}}</h4>
+  </div>
 {{/each}}
 
 {{outlet}}
