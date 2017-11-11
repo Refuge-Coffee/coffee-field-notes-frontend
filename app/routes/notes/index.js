@@ -15,6 +15,11 @@ export default Route.extend({
       dateRecorded: '12-16-2017',
       timeOfDay: 'Evening',
       content: 'Something was really bitter',
+    },
+    {
+      dateRecorded: '12-17-2017',
+      timeOfDay: 'Morning',
+      content: 'Something was really bitter',
     }];
   }
 });
