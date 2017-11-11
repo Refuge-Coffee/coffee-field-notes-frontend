@@ -1,0 +1,8 @@
+<h2>Notes</h2>
+
+{{#each model as |note|}}
+  <h2>Model</h2>
+  <h4>{{note.dateRecorded}} - {{note.content}}</h4>
+{{/each}}
+
+{{outlet}}
