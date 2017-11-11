@@ -3,7 +3,8 @@ import Route from '@ember/routing/route';
 export default Route.extend({
   model() {
     return [{
-      datePublished: Date("11/12/2013"),
+      dateRecorded: '12-12-2017',
+      timeOfDay: 'Afternoon',
       content: 'Grand Old Mansion',
     }];
   }
