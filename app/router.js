@@ -8,7 +8,10 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('home', { path: '/' });
-  this.route('notes');
+  this.route('notes', function() {
+    this.route('index', { path: '/' });
+    this.route('show');
+  });
 });
 
 export default Router;
