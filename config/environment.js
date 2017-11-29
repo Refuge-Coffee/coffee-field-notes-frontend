@@ -3,6 +3,12 @@
 
 module.exports = function(environment) {
   let ENV = {
+    firebase: {
+      apiKey: '',
+      authDomain: '',
+      databaseUrl: '',
+      storageBucket: '',
+    }
     modulePrefix: 'coffee-field-notes',
     environment,
     rootURL: '/',
