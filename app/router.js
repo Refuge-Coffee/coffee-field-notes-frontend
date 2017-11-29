@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('notes', function() {
     this.route('index', { path: '/' });
     this.route('show');
+    this.route('new');
   });
 });
 

@@ -1,0 +1,19 @@
+{{outlet}}
+
+<form>
+  <div class="input-group">
+    <h5>Content</h5>
+    {{input value=model.content type='text'}}
+  </div>
+  <div class="input-group">
+    <h5>Date Recorded</h5>
+    {{input value=model.dateRecorded type='text'}}
+  </div>
+  <div class="input-group">
+    <h5>Time of Day</h5>
+    {{input value=model.timeOfDay type='text'}}
+  </div>
+  <button {{action 'createNote'}}>
+    Create Note
+  </button>
+</form>
