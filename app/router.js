@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('show');
     this.route('new');
   });
+  this.route('coffee');
 });
 
 export default Router;
