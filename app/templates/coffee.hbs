@@ -1,5 +1,13 @@
 {{outlet}}
 
-{{#each model as |coffee|}}
-  {{coffee.origin}}
-{{/each}}
+<h2>Coffee Index</h2>
+
+<div class="container">
+  {{#each model as |coffee i|}}
+    <div class="coffee-card box{{i}}">
+      <h3>{{coffee.name}}</h3>
+      <p>{{coffee.elevation}}</p>
+      <p>{{coffee.origin}}</p>
+    </div>
+  {{/each}}
+</div>
