@@ -6,7 +6,7 @@ nav {
   align-items: center;
   text-align: center;
   border-bottom: 4px solid black;
-  background: green;
+  background: rgb(230, 206, 112);
 }
 
 @media screen and (max-width: 900px) {
@@ -17,29 +17,12 @@ nav {
  }
 }
 
-.1 {
-  grid-column: 1;
-}
-
-.2 {
-  grid-column: 2;
-}
-
 .logo {
-  grid-column: 3;
   background-image: url("https://blog.codepen.io/wp-content/uploads/2012/06/Black-Large.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   height: 10vh;
-}
-
-.3 {
-  grid-column: 4;
-}
-
-.4 {
-  grid-column: 5;
 }
 
 .navLinks {
@@ -50,7 +33,7 @@ nav {
 }
 
 .navLinks:hover {
-  color: white;
+  color: rgb(62, 59, 65);
   border-left: 1px solid white;
   border-right: 1px solid white;
   padding: 1em 1em;

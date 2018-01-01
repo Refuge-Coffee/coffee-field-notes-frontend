@@ -2,10 +2,18 @@
 
 <div class="container">
   {{#each model as |coffee i|}}
-    <div class="box box{{i}}">
-      <h3>{{coffee.name}}</h3>
-      <p>{{coffee.elevation}}</p>
-      <p>{{coffee.origin}}</p>
+    <div class="coffee box box{{i}}">
+      <h3 class="title">{{coffee.name}}</h3>
+      <table>
+        <tr>
+          <th>Elevation</th>
+          <td>{{coffee.elevation}}</td>
+        </tr>
+        <tr>
+          <th>Origin</th>
+          <td>{{coffee.origin}}</td>
+        </tr>
+      </table>
     </div>
   {{/each}}
 </div>
