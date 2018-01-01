@@ -14,6 +14,9 @@ Router.map(function() {
     this.route('new');
   });
   this.route('coffee');
+  this.route('coffee', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
