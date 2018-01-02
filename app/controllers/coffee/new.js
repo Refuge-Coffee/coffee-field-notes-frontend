@@ -2,13 +2,13 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 
-  note: null,
+  coffee: null,
 
   actions: {
-    createNote: function() {
+    createCoffee: function() {
       const flashMessages = Ember.get(this, 'flashMessages');
-      let note = this.get('note');
-      note.save().then((res) => {
+      let coffee = this.get('coffee');
+      coffee.save().then((res) => {
         flashMessages.success('Successfully saved!');
       });
     }
