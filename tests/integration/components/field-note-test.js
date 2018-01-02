@@ -12,13 +12,4 @@ test('it renders', function(assert) {
   this.render(hbs`{{field-note}}`);
 
   assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#field-note}}
-      template block text
-    {{/field-note}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
 });
