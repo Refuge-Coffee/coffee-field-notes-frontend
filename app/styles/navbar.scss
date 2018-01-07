@@ -6,7 +6,7 @@ nav {
   align-items: center;
   text-align: center;
   border-bottom: 4px solid black;
-  background: rgb(230, 206, 112);
+  background: #CACF85;
 }
 
 @media screen and (max-width: 900px) {
@@ -18,16 +18,21 @@ nav {
 }
 
 .logo {
-  background-image: url("https://blog.codepen.io/wp-content/uploads/2012/06/Black-Large.png");
+  background-image: url('/assets/images/logo.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   height: 10vh;
+
+  @include for-phone-only {
+    display: hidden;
+  }
 }
 
 .navLinks {
+  font-family: 'source-code-variable';
+  letter-spacing: 0.15em;
   font-size: 1.2em;
-  text-transform: uppercase;
   text-decoration: none;
   color: black;
 }
