@@ -1,13 +1,15 @@
 {{yield}}
 
-<h3 class="title">{{coffee.name}}</h3>
-<table class="info-table">
-  <tr>
-    <th>Elevation</th>
-    <td>{{coffee.elevation}}</td>
-  </tr>
-  <tr>
-    <th>Origin</th>
-    <td>{{coffee.origin}}</td>
-  </tr>
-</table>
+<div class="click-for-info" onClick={{action 'displayCoffee' }}>
+  <h3 class="title">{{coffee.name}}</h3>
+  <table class="info-table">
+    <tr>
+      <th>Elevation</th>
+      <td>{{coffee.elevation}}</td>
+    </tr>
+    <tr>
+      <th>Origin</th>
+      <td>{{coffee.origin}}</td>
+    </tr>
+  </table>
+</div>
