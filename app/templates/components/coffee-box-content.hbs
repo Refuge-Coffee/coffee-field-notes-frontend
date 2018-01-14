@@ -13,3 +13,11 @@
     </tr>
   </table>
 </div>
+
+{{#if isShowingModal}}
+  {{#modal-dialog onClose="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    {{coffee.origin}}
+  {{/modal-dialog}}
+{{/if}}

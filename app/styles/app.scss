@@ -19,6 +19,9 @@
   src: url('assets/fonts/SourceCodeVariable-Roman.eot');
 }
 
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 @import 'navbar';
 @import 'boxes';
 @import 'coffee';
