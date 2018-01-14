@@ -1,17 +1,7 @@
 <div class="container coffee-index">
   {{#each model as |coffee i|}}
     <div class="coffee box box{{i}}">
-      <h3 class="title">{{coffee.name}}</h3>
-      <table class="info-table">
-        <tr>
-          <th>Elevation</th>
-          <td>{{coffee.elevation}}</td>
-        </tr>
-        <tr>
-          <th>Origin</th>
-          <td>{{coffee.origin}}</td>
-        </tr>
-      </table>
+      {{#coffee-box-content coffee=coffee}}{{/coffee-box-content}}
     </div>
   {{/each}}
 </div>
