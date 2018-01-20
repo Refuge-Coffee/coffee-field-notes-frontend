@@ -1,3 +1,19 @@
 {{yield}}
 
-<h4>{{moment-format note.dateRecorded 'MM-DD-YYYY' 'MM-DD-YYYY'}} - {{note.timeOfDay}}</h4>
+<div class="click-for-info" onClick={{action 'displayNote' }}>
+  <div class="note">
+    <h2 class="title">{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</h2>
+    <div class="note-info">
+      <h3>{{note.timeOfDay}}</h3>
+    </div>
+  </div>
+</div>
+
+
+{{#if isShowingModal}}
+  {{#modal-dialog onClose="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    {{note.content}}
+  {{/modal-dialog}}
+{{/if}}
