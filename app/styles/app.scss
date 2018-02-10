@@ -26,3 +26,20 @@
 @import 'boxes';
 @import 'coffee';
 @import 'notes';
+
+.centered {
+  text-align: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.info-button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  background-color: #cacf85;
+  border: 1px solid black;
+  border-radius: 4px;
+}

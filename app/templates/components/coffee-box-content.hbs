@@ -1,17 +1,11 @@
 {{yield}}
 
-<div class="click-for-info" onClick={{action 'displayCoffee' }}>
+<div class="card-container">
   <h3 class="title">{{coffee.name}}</h3>
-  <table class="info-table">
-    <tr>
-      <th>Elevation</th>
-      <td>{{coffee.elevation}}</td>
-    </tr>
-    <tr>
-      <th>Origin</th>
-      <td>{{coffee.origin}}</td>
-    </tr>
-  </table>
+  <div class="card-info">
+    <p>{{coffee.origin}}, {{ coffee.elevation}} ft.</p>
+  </div>
+  <button class="info-button centered" onClick={{action 'displayCoffee' }}>More Info</button>
 </div>
 
 {{#if isShowingModal}}
@@ -19,5 +13,6 @@
                   targetAttachment="center"
                   translucentOverlay=true}}
     {{coffee.origin}}
+    <h4>{{coffee.notes.length}} notes have been recorded about this coffee</h4>
   {{/modal-dialog}}
 {{/if}}

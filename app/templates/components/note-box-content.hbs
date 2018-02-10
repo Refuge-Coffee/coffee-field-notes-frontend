@@ -1,12 +1,12 @@
 {{yield}}
 
-<div class="click-for-info" onClick={{action 'displayNote' }}>
-  <div class="note">
-    <h2 class="title">{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</h2>
-    <div class="note-info">
-      <h3>{{note.timeOfDay}}</h3>
-    </div>
+<div class="card-container">
+
+  <div class="card-info centered">
+    <h2>{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</h2>
+    <h3>{{note.timeOfDay}}</h3>
   </div>
+  <button class="info-button centered" onClick={{action 'displayNote' }}>More Info</button>
 </div>
 
 
@@ -14,6 +14,7 @@
   {{#modal-dialog onClose="toggleModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
+    <h4>From what I can remember, this is what it was like:</h4>
     {{note.content}}
   {{/modal-dialog}}
 {{/if}}
