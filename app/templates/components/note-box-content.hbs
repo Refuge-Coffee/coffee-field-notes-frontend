@@ -14,7 +14,11 @@
   {{#modal-dialog onClose="toggleModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    <h4>From what I can remember, this is what it was like:</h4>
-    {{note.content}}
+    <div class="modal-content">
+      <h3>From what I can remember,</h3>
+      <div class="note-content">
+        {{note.content}}
+      </div>
+    </div>
   {{/modal-dialog}}
 {{/if}}
