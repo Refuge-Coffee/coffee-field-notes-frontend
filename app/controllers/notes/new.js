@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import { get } from '@ember/object';
 
 export default Controller.extend({
 
@@ -6,7 +7,7 @@ export default Controller.extend({
 
   actions: {
     createNote: function() {
-      const flashMessages = Ember.get(this, 'flashMessages');
+      const flashMessages = get(this, 'flashMessages');
       let note = this.get('note');
       note.save().then((res) => {
         flashMessages.success('Successfully saved!');
