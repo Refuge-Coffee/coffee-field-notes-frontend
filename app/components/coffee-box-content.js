@@ -7,7 +7,6 @@ export default Component.extend({
   actions: {
     displayCoffee() {
       this.toggleProperty('isShowingModal');
-      console.log(this.get('coffee'));
     },
 
     toggleModal() {
