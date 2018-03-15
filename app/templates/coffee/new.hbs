@@ -1,19 +1,23 @@
 {{outlet}}
 
-<form>
-  <div class="input-group">
-    <h5>Name</h5>
-    {{input value=model.name type='text'}}
+<div class="container">
+  <div class="form-box">
+    <form onSubmit={{action 'createCoffee'}}>
+      <div class="input-group">
+        <h5>Name</h5>
+        {{input value=model.name type='text'}}
+      </div>
+      <div class="input-group">
+        <h5>Origin</h5>
+        {{input value=model.origin type='text'}}
+      </div>
+      <div class="input-group">
+        <h5>Elevation</h5>
+        {{input value=model.elevation type='number'}}
+      </div>
+      <button {{action 'createCoffee'}}>
+        Create Coffee
+      </button>
+    </form>
   </div>
-  <div class="input-group">
-    <h5>Origin</h5>
-    {{input value=model.origin type='text'}}
-  </div>
-  <div class="input-group">
-    <h5>Elevation</h5>
-    {{input value=model.elevation type='number'}}
-  </div>
-  <button {{action 'createCoffee'}}>
-    Create Coffee
-  </button>
-</form>
+</div>
