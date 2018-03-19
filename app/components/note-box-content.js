@@ -7,7 +7,6 @@ export default Component.extend({
   actions: {
     displayNote() {
       this.toggleProperty('isShowingModal');
-      console.log(this.get('note'));
     },
 
     toggleModal() {

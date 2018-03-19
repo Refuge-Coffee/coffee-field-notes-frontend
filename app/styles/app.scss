@@ -49,9 +49,9 @@
 }
 
 .centered {
-  text-align: center;
+  width: 40%;
   margin-left: 30%;
-  margin-right: 30%;
+  margin-right: 30%
 }
 
 .info-button {
@@ -77,9 +77,29 @@
 
 .headline {
   @include stroke(2, black);
-  font-size: 6em;
+
+  @include for-desktop-up {
+    font-size: 5em;
+  }
+
+  @include for-tablet-landscape-up  {
+    font-size: 4em;
+  }
+
+  @include for-phone-only {
+    font-size: 3em;
+  }
   color: white;
   margin: 0px;
   text-transform: uppercase;
   letter-spacing: 10px;
+}
+
+.marquee {
+  width: 80%;
+  background: grey;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
