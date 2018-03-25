@@ -13,8 +13,9 @@ Router.map(function() {
     this.route('show');
     this.route('new');
   });
-  this.route('bean');
-  this.route('bean', function() {
+  this.route('beans', function() {
+    this.route('index', { path: '/' });
+    this.route('show');
     this.route('new');
   });
 });
