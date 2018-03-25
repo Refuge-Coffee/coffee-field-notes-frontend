@@ -12,5 +12,5 @@ test('it renders', function(assert) {
   this.render(hbs`{{menu-nav}}`);
 
   assert.equal(this.$('.navLinks')[0].text.trim(), 'Notes');
-  assert.equal(this.$('.navLinks')[1].text.trim(), 'Coffee');
+  assert.equal(this.$('.navLinks')[1].text.trim(), 'bean');
 });

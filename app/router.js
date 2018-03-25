@@ -13,8 +13,8 @@ Router.map(function() {
     this.route('show');
     this.route('new');
   });
-  this.route('coffee');
-  this.route('coffee', function() {
+  this.route('bean');
+  this.route('bean', function() {
     this.route('new');
   });
 });

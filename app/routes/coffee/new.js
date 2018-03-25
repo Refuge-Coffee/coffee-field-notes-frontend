@@ -3,12 +3,12 @@ import Route from '@ember/routing/route';
 export default Route.extend({
 
   model() {
-    return this.get('store').createRecord('coffee');
+    return this.get('store').createRecord('bean');
   },
 
   setupController(controller, model) {
     this._super(...arguments);
-    let coffee = model;
-    controller.set('coffee', coffee);
+    let bean = model;
+    controller.set('bean', bean);
   }
 });

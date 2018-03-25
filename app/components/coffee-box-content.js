@@ -1,11 +1,11 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  coffee: null,
+  bean: null,
   isShowingModal: false,
 
   actions: {
-    displayCoffee() {
+    displaybean() {
       this.toggleProperty('isShowingModal');
     },
 

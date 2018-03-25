@@ -5,5 +5,5 @@ export default DS.Model.extend({
   timeOfDay: DS.attr('string'),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('string'),
-  coffee: DS.belongsTo('coffee')
+  bean: DS.belongsTo('bean')
 });

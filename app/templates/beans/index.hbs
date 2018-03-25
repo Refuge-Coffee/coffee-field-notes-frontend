@@ -1,15 +1,15 @@
 <div class="introduction-container">
   <div class="box box">
     <div class="box-content">
-      <h1 class="headline centered">Coffee</h1>
+      <h1 class="headline centered">bean</h1>
     </div>
   </div>
 </div>
 
 <div class="container">
-  {{#each model as |coffee i|}}
-    <div class="coffee box box{{i}}">
-      {{#coffee-box-content coffee=coffee}}{{/coffee-box-content}}
+  {{#each model as |bean i|}}
+    <div class="bean box box{{i}}">
+      {{#bean-box-content bean=bean}}{{/bean-box-content}}
     </div>
   {{/each}}
 </div>

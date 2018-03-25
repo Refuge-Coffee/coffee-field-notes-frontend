@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'coffee-field-notes',
+    modulePrefix: 'bean-field-notes',
     environment,
     rootURL: '/',
     locationType: 'auto',

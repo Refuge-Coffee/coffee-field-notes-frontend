@@ -1,18 +1,18 @@
 {{yield}}
 
 <div class="card-container">
-  <h3 class="title">{{coffee.name}}</h3>
+  <h3 class="title">{{bean.name}}</h3>
   <div class="card-info">
-    <p>{{coffee.origin}}, {{ coffee.elevation}} ft.</p>
+    <p>{{bean.origin}}, {{ bean.elevation}} ft.</p>
   </div>
-  <button class="info-button centered" onClick={{action 'displayCoffee' }}>More Info</button>
+  <button class="info-button centered" onClick={{action 'displaybean' }}>More Info</button>
 </div>
 
 {{#if isShowingModal}}
   {{#modal-dialog onClose="toggleModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    {{coffee.origin}}
-    <h4>{{coffee.notes.length}} notes have been recorded about this coffee</h4>
+    {{bean.origin}}
+    <h4>{{bean.notes.length}} notes have been recorded about this bean</h4>
   {{/modal-dialog}}
 {{/if}}

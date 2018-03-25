@@ -3,13 +3,13 @@ import { get } from '@ember/object';
 
 export default Controller.extend({
 
-  coffee: null,
+  bean: null,
 
   actions: {
-    createCoffee: function() {
+    createbean: function() {
       const flashMessages = get(this, 'flashMessages');
-      let coffee = this.get('coffee');
-      coffee.save().then(() => {
+      let bean = this.get('bean');
+      bean.save().then(() => {
         flashMessages.success('Successfully saved!');
       });
     }
