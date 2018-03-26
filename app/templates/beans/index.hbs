@@ -1,12 +1,12 @@
 <div class="introduction-container">
   <div class="box box">
     <div class="box-content">
-      <h1 class="headline centered">bean</h1>
+      <h1 class="headline centered">List of Noted Coffee Beans</h1>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container wrap">
   {{#each model as |bean i|}}
     <div class="bean box box{{i}}">
       {{#bean-box-content bean=bean}}{{/bean-box-content}}
