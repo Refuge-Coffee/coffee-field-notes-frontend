@@ -21,6 +21,38 @@ body {
   display: flex;
 }
 
+.introduction-container {
+  margin-top: 5%;
+  margin-bottom: 2.5%;
+  background: grey;
+  border: 2px solid black;
+
+  .box {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+
+  .headline {
+    @include stroke(2, black);
+
+    @include for-desktop-up {
+      font-size: 5em;
+    }
+
+    @include for-tablet-landscape-up  {
+      font-size: 4em;
+    }
+
+    @include for-phone-only {
+      font-size: 3em;
+    }
+    color: white;
+    margin: 0px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+}
+
 .wrap {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;

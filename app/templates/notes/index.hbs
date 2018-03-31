@@ -1,17 +1,25 @@
-<div class="introduction-container">
-  <div class="marquee">
+<div class="container wrap introduction-container">
+  <div class="box box">
     <div class="box-content">
-      <h1 class="headline centered">Recent Notes</h1>
+      <h1 class="headline centered" onClick={{action 'sortByCreatedAt' 'ASC'}}>Show Recent Notes About Coffee</h1>
+    </div>
+  </div>
+  <div class="box box">
+    <div class="box-content">
+      <h1 class="headline centered" onClick={{action 'sortByCreatedAt' 'DESC'}}>Show Older Notes About Coffee</h1>
+    </div>
+  </div>
+  <div class="box box">
+    <div class="box-content">
+      <h1 class="headline centered">Show Popular Notes About Coffee</h1>
     </div>
   </div>
 </div>
 
 <div class="container wrap">
-  {{#each model as |note i|}}
+  {{#each notes as |note i|}}
     <div class="box box{{i}}">
       {{#note-box-content note=note}}{{/note-box-content}}
     </div>
   {{/each}}
 </div>
-
-{{outlet}}

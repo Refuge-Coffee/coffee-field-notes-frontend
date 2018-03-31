@@ -22,9 +22,7 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
 
-@import 'navbar';
-@import 'note-box-content';
-@import 'boxes';
+
 
 /// Stroke font-character
 /// @param  {Integer} $stroke - Stroke width
@@ -75,31 +73,6 @@
   }
 }
 
-.headline {
-  @include stroke(2, black);
-
-  @include for-desktop-up {
-    font-size: 5em;
-  }
-
-  @include for-tablet-landscape-up  {
-    font-size: 4em;
-  }
-
-  @include for-phone-only {
-    font-size: 3em;
-  }
-  color: white;
-  margin: 0px;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-}
-
-.marquee {
-  width: 80%;
-  background: grey;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
+@import 'navbar';
+@import 'note-box-content';
+@import 'boxes';
