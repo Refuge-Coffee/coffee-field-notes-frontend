@@ -18,6 +18,7 @@ Router.map(function() {
     this.route('show');
     this.route('new');
   });
+  this.route('locations', function() {});
 });
 
 export default Router;
