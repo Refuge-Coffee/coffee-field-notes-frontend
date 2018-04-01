@@ -6,4 +6,16 @@ export default function(){
     this.use('toRight'),
     this.reverse('toLeft')
   );
+  this.transition(
+    this.fromRoute('beans'),
+    this.toRoute('locations'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('notes'),
+    this.toRoute('locations'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
 }
