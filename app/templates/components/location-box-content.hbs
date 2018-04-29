@@ -1,0 +1,14 @@
+{{yield}}
+
+<div class="card-container">
+  <h3 class="title">{{location.name}}</h3>
+  <button class="info-button centered" onClick={{action 'displayLocation' }}>More Info</button>
+</div>
+
+{{#if isShowingModal}}
+  {{#modal-dialog onClose="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    <p>{{location.address}}</p>
+  {{/modal-dialog}}
+{{/if}}

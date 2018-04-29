@@ -5,3 +5,11 @@
     </div>
   </div>
 </div>
+
+<div class="container wrap">
+  {{#each locations as |location i|}}
+    <div class="box box{{i}}">
+      {{#location-box-content location=location}}{{/location-box-content}}
+    </div>
+  {{/each}}
+</div>
