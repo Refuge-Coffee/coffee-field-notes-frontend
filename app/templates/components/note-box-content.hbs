@@ -2,11 +2,11 @@
 
 <div class="card-container">
 
-  <div class="card-info centered">
-    <h2>{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</h2>
-    <h3>{{note.timeOfDay}}</h3>
+  <div class="card-info">
+    <p>{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</p>
+    <p>{{note.timeOfDay}}</p>
   </div>
-  <button class="info-button centered" onClick={{action 'displayNote' }}>More Info</button>
+  <button class="info-button" onClick={{action 'displayNote' }}>More Info</button>
 </div>
 
 

@@ -36,15 +36,15 @@ body {
     @include stroke(2, black);
 
     @include for-desktop-up {
-      font-size: 5em;
+      font-size: 3em;
     }
 
     @include for-tablet-landscape-up  {
-      font-size: 4em;
+      font-size: 3em;
     }
 
     @include for-phone-only {
-      font-size: 3em;
+      font-size: 2.5em;
     }
     color: white;
     margin: 0px;
@@ -69,6 +69,33 @@ body {
 
   border: 3px solid #484349;
 
+  .box-content {
+    margin: 2.5%;
+  }
+}
+
+.item-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @include for-desktop-up {
+    max-width: 20%;
+    flex-basis: 20%;
+  }
+
+  @include for-tablet-landscape-up  {
+    max-width: 30%;
+    flex-basis: 30%;
+  }
+
+  @include for-phone-only {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
+.filter-box {
   @include for-desktop-up {
     max-width: 20%;
     flex-basis: 20%;
@@ -83,10 +110,6 @@ body {
     max-width: 100%;
     flex-basis: 100%;
     margin: 0;
-  }
-
-  .box-content {
-    margin: 2.5%;
   }
 }
 
@@ -140,4 +163,12 @@ body {
     border-radius: 6px;
   }
 
+}
+
+.card-container {
+  padding: 10px;
+
+  .card-info {
+    font-size: 1.5em;
+  }
 }

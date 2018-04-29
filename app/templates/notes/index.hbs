@@ -1,24 +1,24 @@
 <div class="container wrap introduction-container">
-  <div class="box box">
+  <div class="box filter-box">
     <div class="box-content">
-      <h1 class="headline centered" onClick={{action 'sortByCreatedAt' 'ASC'}}>Show Recent Notes</h1>
+      <h1 class="headline centered" onClick={{action 'sortByCreatedAt' 'ASC'}}>Show More Recent</h1>
     </div>
   </div>
-  <div class="box box">
+  <div class="box filter-box">
     <div class="box-content">
-      <h1 class="headline centered" onClick={{action 'sortByCreatedAt' 'DESC'}}>Show Older Notes</h1>
+      <h1 class="headline centered" onClick={{action 'sortByCreatedAt' 'DESC'}}>Show Less Recent</h1>
     </div>
   </div>
-  <div class="box box">
+  <div class="box filter-box">
     <div class="box-content">
-      <h1 class="headline centered">Show Popular Notes</h1>
+      <h1 class="headline centered">Show Most Popular</h1>
     </div>
   </div>
 </div>
 
 <div class="container wrap">
   {{#each notes as |note i|}}
-    <div class="box box{{i}}">
+    <div class="box box{{i}} item-box">
       {{#note-box-content note=note}}{{/note-box-content}}
     </div>
   {{/each}}
