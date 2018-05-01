@@ -19,6 +19,7 @@ Router.map(function() {
     this.route('new');
   });
   this.route('locations', function() {});
+  this.route('roasters', function() {});
 });
 
 export default Router;
