@@ -1,1 +1,15 @@
-<h1>Roasters</h1>
+<div class="container wrap introduction-container">
+  <div class="box box">
+    <div class="box-content">
+      <h1 class="headline centered">List of Roasters I've Written About</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container wrap">
+  {{#each roasters as |roaster i|}}
+    <div class="box box{{i}} item-box">
+      {{#roaster-box-content roaster=roaster}}{{/roaster-box-content}}
+    </div>
+  {{/each}}
+</div>

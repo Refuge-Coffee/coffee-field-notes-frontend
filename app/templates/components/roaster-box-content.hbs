@@ -1,0 +1,14 @@
+{{yield}}
+
+<div class="card-container">
+  <h3 class="title">{{roaster.name}}</h3>
+  <button class="info-button centered" onClick={{action 'displayRoaster' }}>More Info</button>
+</div>
+
+{{#if isShowingModal}}
+  {{#modal-dialog onClose="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    <p>{{roaster.name}}</p>
+  {{/modal-dialog}}
+{{/if}}

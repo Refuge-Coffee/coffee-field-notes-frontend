@@ -18,4 +18,22 @@ export default function(){
     this.use('toLeft'),
     this.reverse('toRight')
   );
+  this.transition(
+    this.fromRoute('roasters'),
+    this.toRoute('locations'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('roasters'),
+    this.toRoute('beans'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('roasters'),
+    this.toRoute('notes'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
 }
