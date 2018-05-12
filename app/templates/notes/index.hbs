@@ -19,7 +19,7 @@
 <div class="container wrap">
   {{#each notes as |note i|}}
     <div class="box box{{i}} item-box">
-      {{#note-box-content note=note}}{{/note-box-content}}
+      {{notes/note-box-content note=note}}
     </div>
   {{/each}}
 </div>

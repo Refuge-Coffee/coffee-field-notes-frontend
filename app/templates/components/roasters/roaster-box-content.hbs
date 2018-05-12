@@ -9,6 +9,6 @@
   {{#modal-dialog onClose="toggleModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
-    <p>{{roaster.name}}</p>
+    {{roasters/roaster-modal-content roaster=roaster}}
   {{/modal-dialog}}
 {{/if}}

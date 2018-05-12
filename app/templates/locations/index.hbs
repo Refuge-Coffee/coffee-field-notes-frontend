@@ -9,7 +9,7 @@
 <div class="container wrap">
   {{#each locations as |location i|}}
     <div class="box box{{i}} item-box">
-      {{#location-box-content location=location}}{{/location-box-content}}
+      {{locations/location-box-content location=location}}
     </div>
   {{/each}}
 </div>

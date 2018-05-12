@@ -9,7 +9,7 @@
 <div class="container wrap">
   {{#each roasters as |roaster i|}}
     <div class="box box{{i}} item-box">
-      {{#roaster-box-content roaster=roaster}}{{/roaster-box-content}}
+      {{roasters/roaster-box-content roaster=roaster}}
     </div>
   {{/each}}
 </div>
