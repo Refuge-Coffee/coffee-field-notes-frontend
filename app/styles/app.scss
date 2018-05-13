@@ -22,8 +22,6 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
 
-
-
 /// Stroke font-character
 /// @param  {Integer} $stroke - Stroke width
 /// @param  {Color}   $color  - Stroke color
@@ -46,6 +44,29 @@
   text-shadow: stroke($stroke, $color);
 }
 
+$primary: #48A9A6;
+$secondary_1: #E4DFDA;
+$secondary_2: #F7F0F0;
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
 .centered {
   width: 40%;
   margin-left: 30%;
@@ -57,7 +78,7 @@
   height: 50px;
   font-size: 1.3em;
   letter-spacing: 2px;
-  background-color: #cacf85;
+  background-color: $secondary_1;
   border: 1px solid black;
   border-radius: 4px;
 }
