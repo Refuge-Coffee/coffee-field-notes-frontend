@@ -29,22 +29,20 @@
   position: relative;
   .box {
     background: white;
-    width: 30vw;
-    height: 30vh;
   }
   .trailing-box-1 {
     z-index: -1;
     width: 30vw;
-    height: 30vh;
-    position: absolute; top: -20px; left: 140px;
-    background: red;
+    height: 25vh;
+    position: absolute; top: -10px; left: 40px;
+    background: $primary;
   }
   .trailing-box-2 {
     z-index: -2;
     width: 30vw;
-    height: 30vh;
-    position: absolute; top: -40px; left: 160px;
-    background: blue;
+    height: 25vh;
+    position: absolute; top: -20px; left: 60px;
+    background: $secondary_3;
   }
 }
 
@@ -73,24 +71,6 @@
 
   @include for-tablet-landscape-up  {
     max-width: 30%;
-    flex-basis: 30%;
-  }
-
-  @include for-phone-only {
-    max-width: 100%;
-    flex-basis: 100%;
-    margin: 0;
-  }
-}
-
-.filter-box {
-  @include for-desktop-up {
-    max-width: 20%;
-    flex-basis: 20%;
-  }
-
-  @include for-tablet-landscape-up  {
-    max-width: 40%;
     flex-basis: 30%;
   }
 
