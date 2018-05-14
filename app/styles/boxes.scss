@@ -81,6 +81,17 @@
     flex-basis: 100%;
     margin: 0;
   }
+  .item-container {
+    padding: 15px;
+    .item-info {
+      p {
+        font-size: 1.4em;
+      }
+      .item-creation-date {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .form-box {

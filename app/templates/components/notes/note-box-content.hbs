@@ -1,9 +1,9 @@
 {{yield}}
 
-<div class="card-container">
+<div class="item-container">
 
-  <div class="card-info">
-    <p>{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</p>
+  <div class="item-info">
+    <p class="item-creation-date">{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</p>
     <p>{{note.timeOfDay}}</p>
   </div>
   <button class="info-button" onClick={{action 'displayNote' }}>More Info</button>
