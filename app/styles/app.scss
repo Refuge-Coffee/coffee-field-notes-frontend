@@ -95,6 +95,39 @@ body {
   }
 }
 
+.flash-message {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 6px;
+
+  &.alert-danger {
+    color: #a94442;
+    border-color: #ebcccc;
+    background-color: #f2dede;
+  }
+
+  &.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+  }
+
+  .message {
+    padding: 10px;
+    .message-content {
+      font-size: 1.5em;
+      display: inline;
+    }
+
+    .close-message {
+      float: right;
+      font-size: 1.5em;
+    }
+  }
+}
+
 @import 'navbar';
 @import 'boxes';
 @import 'forms';

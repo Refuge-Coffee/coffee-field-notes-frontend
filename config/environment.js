@@ -21,6 +21,19 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    flashMessageDefaults: {
+      // flash message defaults
+      timeout: 5000,
+      extendedTimeout: 0,
+      priority: 200,
+      sticky: true,
+      showProgress: true,
+
+      // service defaults
+      type: 'info',
+      types: [ 'info', 'danger', 'success'],
+      preventDuplicates: false
     }
   };
 

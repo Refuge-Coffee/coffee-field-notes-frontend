@@ -1,7 +1,12 @@
 {{menu-nav}}
 
 {{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
+  {{#flash-message flash=flash as |component flash close|}}
+    <div class="message">
+      <p class="message-content">{{flash.message}}</p>
+      <a href="#" class="close-message" {{action close}}>X</a>
+    </div>
+  {{/flash-message}}
 {{/each}}
 
 {{liquid-outlet}}
