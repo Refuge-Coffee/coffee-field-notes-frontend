@@ -16,9 +16,14 @@
     </div>
     <div class="input-group">
       <h3>Coffee</h3>
-      {{input value=model.bean.name type='text'}}
+      {{#if newBean }}
+        <button {{action 'toggleNewCoffee'}}>Looking for an Existing Coffee?</button>
+        {{input value=model.bean.name type='text'}}
+      {{ else }}
+        <button {{action 'toggleNewCoffee'}}>New Coffee?</button>
+      {{/if}}
     </div>
-    <button type="submit">
+    <button type="submit" class="submit-button">
       Create Note
     </button>
   </form>

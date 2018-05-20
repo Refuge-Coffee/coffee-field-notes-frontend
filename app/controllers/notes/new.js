@@ -4,6 +4,7 @@ import { get } from '@ember/object';
 export default Controller.extend({
 
   note: null,
+  newBean: false,
 
   actions: {
     createNote: function() {
@@ -17,6 +18,10 @@ export default Controller.extend({
     updateTimeofDay: function(timeOfDay) {
       let note = this.get('note');
       note.set('timeOfDay', timeOfDay);
+    },
+
+    toggleNewCoffee: function() {
+      this.toggleProperty('newBean');
     }
   }
 });
