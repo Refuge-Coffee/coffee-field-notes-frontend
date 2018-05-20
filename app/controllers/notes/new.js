@@ -12,6 +12,11 @@ export default Controller.extend({
       note.save().then(() => {
         flashMessages.success('Successfully saved!');
       });
+    },
+
+    updateTimeofDay: function(timeOfDay) {
+      let note = this.get('note');
+      note.set('timeOfDay', timeOfDay);
     }
   }
 });

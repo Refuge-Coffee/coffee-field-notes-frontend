@@ -1,19 +1,25 @@
-{{outlet}}
 
-<div class="container">
-  <div class="form-box">
-    <form onSubmit={{action 'createNote'}}>
-      <div class="input-group">
-        <h4>Content</h4>
-        {{textarea value=model.content rows=10}}
-      </div>
-      <div class="input-group">
-        <h4>Time of Day</h4>
-        {{input value=model.timeOfDay type='text'}}
-      </div>
-      <button {{action 'createNote'}}>
-        Create Note
-      </button>
-    </form>
-  </div>
+<div class="create-note-form">
+  <form onSubmit={{action 'createNote'}}>
+    <div class="input-group">
+      <h3>Content</h3>
+      {{textarea value=model.content rows=10}}
+    </div>
+    <div class="input-group">
+      <h3>Time of Day</h3>
+      <select onChange={{action 'updateTimeofDay' value="target.value" }}>
+        <option value='Morning'>Morning</option>
+        <option value='Late Morning'>Late Morning</option>
+        <option value='Early Afternoon'>Early Afternoon</option>
+        <option value='Evening'>Evening</option>
+      </select>
+    </div>
+    <div class="input-group">
+      <h3>Coffee</h3>
+      {{input value=model.bean.name type='text'}}
+    </div>
+    <button type="submit">
+      Create Note
+    </button>
+  </form>
 </div>
