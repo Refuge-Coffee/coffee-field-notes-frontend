@@ -1,10 +1,13 @@
 import Controller from '@ember/controller';
 import { get } from '@ember/object';
+import { inject } from '@ember/service';
 
 export default Controller.extend({
 
   note: null,
   newBean: false,
+
+  flashMessages: inject(),
 
   actions: {
     createNote: function() {
@@ -12,6 +15,8 @@ export default Controller.extend({
       let note = this.get('note');
       note.save().then(() => {
         flashMessages.success('Successfully saved!');
+      }).catch(function() {
+        flashMessages.danger('Something went wrong when saving your note.');
       });
     },
 

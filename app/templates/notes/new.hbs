@@ -2,6 +2,15 @@
 <div class="create-note-form">
   <form onSubmit={{action 'createNote'}}>
     <div class="input-group">
+      <h3>Coffee</h3>
+      {{#if newBean }}
+        <button {{action 'toggleNewCoffee'}}>Looking for an Existing Coffee?</button>
+        {{input value=model.bean.name type='text'}}
+      {{ else }}
+        <button {{action 'toggleNewCoffee'}}>New Coffee?</button>
+      {{/if}}
+    </div>
+    <div class="input-group">
       <h3>Content</h3>
       {{textarea value=model.content rows=10}}
     </div>
@@ -13,15 +22,6 @@
         <option value='Early Afternoon'>Early Afternoon</option>
         <option value='Evening'>Evening</option>
       </select>
-    </div>
-    <div class="input-group">
-      <h3>Coffee</h3>
-      {{#if newBean }}
-        <button {{action 'toggleNewCoffee'}}>Looking for an Existing Coffee?</button>
-        {{input value=model.bean.name type='text'}}
-      {{ else }}
-        <button {{action 'toggleNewCoffee'}}>New Coffee?</button>
-      {{/if}}
     </div>
     <button type="submit" class="submit-button">
       Create Note
