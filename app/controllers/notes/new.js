@@ -8,6 +8,7 @@ export default Controller.extend({
   newBean: false,
 
   flashMessages: inject(),
+  session: inject(),
 
   actions: {
     createNote: function() {
