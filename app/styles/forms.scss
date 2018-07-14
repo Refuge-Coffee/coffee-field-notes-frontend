@@ -6,12 +6,14 @@
   margin: 0 auto;
   margin-top: 50px;
 
+}
 
+form {
   .input-group {
     margin-left: 10%;
     margin-right: 10%;
 
-    input[type="text"] {
+    input[type="text"], input[type="password"] {
       height: 6vh;
       width: 50vw;
       border-radius: 6px;
