@@ -1,18 +1,22 @@
-  <div class="login-form">
-    <form {{action 'authenticateWithOAuth2' on='submit'}}>
-      <div class="input-group">
-        <label for="email">Login</label>
-        {{input value=email placeholder='your_email@coffee.com'}}
-      </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        {{input value=password placeholder='Enter Password' type='password'}}
-      </div>
-      <div class="input-group">
-        <button type="submit" class="btn btn-default">Login</button>
-      </div>
-    </form>
-  </div>
+  {{#if session.isAuthenticated }}
+    <h2>You are logged in!</h2>
+  {{ else }}
+    <div class="login-form">
+      <form {{action 'authenticateWithOAuth2' on='submit'}}>
+        <div class="input-group">
+          <label for="email">Login</label>
+          {{input value=email placeholder='your_email@coffee.com'}}
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          {{input value=password placeholder='Enter Password' type='password'}}
+        </div>
+        <div class="input-group">
+          <button type="submit" class="btn btn-default">Login</button>
+        </div>
+      </form>
+    </div>
+  {{/if}}
   {{#if errorMessage}}
     <div class="alert alert-danger">
       <p>

@@ -9,13 +9,9 @@ export default Component.extend({
   actions: {
     authenticateWithOAuth2() {
       let { email, password } = this.getProperties('email', 'password');
-      this.get('session').authenticate('authenticator:oauth2', email, password)
-        .then(() => {
-          console.log("User logged in!")  
-        })
-        .catch((error) => {
-          this.set('errorMessage', error.message);
-        });
+      this.get('session').authenticate('authenticator:oauth2', email, password).catch((reason) => {
+        this.set('errorMessage', reason.error || reason);
+      });
     }
   }
 });
