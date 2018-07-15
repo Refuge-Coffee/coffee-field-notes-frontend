@@ -1,19 +1,20 @@
 import { inject as service } from '@ember/service';
 import Component from '@ember/component';
-import config from '../config/environment';
 
 export default Component.extend({
   session: service('session'),
+  email: "",
+  password: "",
 
   actions: {
     authenticateWithOAuth2() {
-      let { identification, password } = this.getProperties('identification', 'password');
-      this.get('session').authenticate('authenticator:oauth2', identification, password)
+      let { email, password } = this.getProperties('email', 'password');
+      this.get('session').authenticate('authenticator:oauth2', email, password)
         .then(() => {
-          this.get('rememberMe') && this.set('session.store.cookieExpirationTime', 60 * 60 * 24 * 14);
+          console.log("User logged in!")  
         })
-        .catch((reason) => {
-          this.set('errorMessage', reason.error);
+        .catch((error) => {
+          this.set('errorMessage', error.message);
         });
     }
   }
