@@ -1,16 +1,28 @@
 import Controller from '@ember/controller';
-import { get } from '@ember/object';
+import { get, set, computed } from '@ember/object';
 import { inject } from '@ember/service';
 
 export default Controller.extend({
 
   note: null,
   newBean: false,
+  searchTerm: "",
+  searchResults: null,
 
   flashMessages: inject(),
   session: inject(),
+  store: inject(),
+
+  searchResults: computed('searchTerm', function() {
+    return this.get('store').query('bean', {
+      filter: {
+        query: get(this, 'searchTerm')
+      }
+    });
+  }),
 
   actions: {
+
     createNote: function() {
       const flashMessages = get(this, 'flashMessages');
       let note = this.get('note');

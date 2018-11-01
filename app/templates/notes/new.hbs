@@ -7,7 +7,20 @@
         <button {{action 'toggleNewCoffee'}}>Looking for an Existing Coffee?</button>
         {{input value=model.bean.name type='text'}}
       {{ else }}
-        <button {{action 'toggleNewCoffee'}}>New Coffee?</button>
+        <h3>Search for Existing Beans</h3>
+        {{input value=searchTerm type='text' }}
+        <br />
+        <div class="search-results">
+          {{#if searchResults.isPending}}
+            <h3>Loading....</h3>
+          {{else}}
+            {{#each searchResults as |result|}}
+              <p>{{result.name}}</p>
+            {{/each}}
+          {{/if}}
+        </div>
+
+        <button {{action 'toggleNewCoffee'}}>Want to Add A New Type of Bean?</button>
       {{/if}}
     </div>
     <div class="input-group">
