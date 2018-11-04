@@ -6,20 +6,10 @@ export default Controller.extend({
 
   note: null,
   newBean: false,
-  searchTerm: "",
-  searchResults: null,
 
   flashMessages: inject(),
   session: inject(),
   store: inject(),
-
-  searchResults: computed('searchTerm', function() {
-    return this.get('store').query('bean', {
-      filter: {
-        query: get(this, 'searchTerm')
-      }
-    });
-  }),
 
   actions: {
 

@@ -1,0 +1,18 @@
+<div class="search-component">
+  <h3>Search for Existing Beans</h3>
+  {{input value=searchTerm type='text' }}
+  <br />
+  <div class="search-results">
+    {{#if searchResults.isPending}}
+      <h3>Loading....</h3>
+    {{else}}
+      {{#each searchResults as |result|}}
+        <p><a href="#" onClick={{action 'selectBean' result.id}}>{{result.name}}</a></p>
+      {{/each}}
+    {{/if}}
+  </div>
+</div>
+
+{{#if selectedResult}}
+  <h4>Selected Result: {{selectedResult.name}}</h4>
+{{/if}}

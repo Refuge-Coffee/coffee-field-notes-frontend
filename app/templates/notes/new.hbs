@@ -2,24 +2,12 @@
 <div class="create-note-form">
   <form>
     <div class="input-group">
-      <h3>Coffee</h3>
+      <h2>Draft a New Note</h2>
       {{#if newBean }}
         <button {{action 'toggleNewCoffee'}}>Looking for an Existing Coffee?</button>
         {{input value=model.bean.name type='text'}}
       {{ else }}
-        <h3>Search for Existing Beans</h3>
-        {{input value=searchTerm type='text' }}
-        <br />
-        <div class="search-results">
-          {{#if searchResults.isPending}}
-            <h3>Loading....</h3>
-          {{else}}
-            {{#each searchResults as |result|}}
-              <p>{{result.name}}</p>
-            {{/each}}
-          {{/if}}
-        </div>
-
+        {{beans/bean-search}}
         <button {{action 'toggleNewCoffee'}}>Want to Add A New Type of Bean?</button>
       {{/if}}
     </div>
