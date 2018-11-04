@@ -4,6 +4,11 @@ import { inject } from '@ember/service';
 
 
 export default Component.extend({
+  
+  // Passed in from component.
+  note: null,
+
+  // Set in component.
   searchTerm: "",
   searchResults: null,
   selectedResult: null,
@@ -22,6 +27,7 @@ export default Component.extend({
     async selectBean(beanId) {
       let bean = await this.get('store').findRecord('bean', beanId);
       set(this, 'selectedResult', bean);
+      set(this, 'note.bean', bean);
     }
   }
 });

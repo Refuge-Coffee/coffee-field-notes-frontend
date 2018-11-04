@@ -7,7 +7,7 @@
         <button {{action 'toggleNewCoffee'}}>Looking for an Existing Coffee?</button>
         {{input value=model.bean.name type='text'}}
       {{ else }}
-        {{beans/bean-search}}
+        {{beans/bean-search note=model}}
         <button {{action 'toggleNewCoffee'}}>Want to Add A New Type of Bean?</button>
       {{/if}}
     </div>
