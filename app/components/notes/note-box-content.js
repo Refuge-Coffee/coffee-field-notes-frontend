@@ -17,7 +17,7 @@ export default Component.extend({
 
     editNote() {
       console.log("Going to edit note.");
-    }
+    },
 
     toggleModal() {
       this.toggleProperty('isShowingModal');
