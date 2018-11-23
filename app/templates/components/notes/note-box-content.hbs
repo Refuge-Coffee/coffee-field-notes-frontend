@@ -3,10 +3,13 @@
 <div class="item-container">
 
   <div class="item-info">
-    <p class="item-creation-date">{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}}</p>
-    <p>{{note.timeOfDay}}</p>
+    <h3 class="item-title">{{note.bean.name}}</h3>
+    <h4 class="item-subtitle">{{moment-format note.createdAt 'MM-DD-YYYY' 'MM-DD-YYYY'}} - {{note.timeOfDay}}</h4>
   </div>
-  <button class="info-button" onClick={{action 'displayNote' }}>More Info</button>
+  <button class="info-button" onClick={{action 'displayNote' }}>Read More</button>
+  {{#if adminLoggedIn}}
+    <button class="info-button" onClick={{action 'editNote' }}>Edit Note</button>
+  {{/if}}
 </div>
 
 
